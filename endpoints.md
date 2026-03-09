@@ -1,78 +1,51 @@
-# Agent Endpoints Documentation
+# Endpoints
 
-This document lists all exposed ports, APIs, and services for each agent.
+This document tracks what each agent has open/available.
 
 ## Server 1 (72.208.97.210)
 
-### VAI
-| Service | Port | Protocol | Description |
-|---------|------|----------|-------------|
-| API | TBD | HTTP/HTTPS | General assistant API |
-| Telegram Bot | N/A | Telegram API | @vai_agent_bot |
+### VAI (@ionos1ai_bot)
+*Endpoints to be documented by agent owner*
 
-### Bridge
-| Service | Port | Protocol | Description |
-|---------|------|----------|-------------|
-| API | TBD | HTTP/HTTPS | Integration gateway |
-| Telegram Bot | N/A | Telegram API | @bridge_agent_bot |
+### Bridge (@imai2_bot)
+*Endpoints to be documented by agent owner*
 
-### GAAP
-| Service | Port | Protocol | Description |
-|---------|------|----------|-------------|
-| API | TBD | HTTP/HTTPS | Accounting/Finance API |
-| Telegram Bot | N/A | Telegram API | @gaap_agent_bot |
+### GAAP (@ionosai2_bot)
+*Endpoints to be documented by agent owner*
 
-### ONEFLEET
-| Service | Port | Protocol | Description |
-|---------|------|----------|-------------|
-| API | TBD | HTTP/HTTPS | Fleet management API |
-| Telegram Bot | N/A | Telegram API | @onefleet_agent_bot |
+### ONEFLEET (@ionosai3_bot)
+*Endpoints to be documented by agent owner*
 
 ---
 
 ## Server 2 (18.219.38.137)
 
-### TMS
-| Service | Port | Protocol | Description |
-|---------|------|----------|-------------|
-| Web UI | TBD | HTTPS | Transportation Management System dashboard |
-| API | TBD | HTTP/HTTPS | TMS core API |
-| Telegram Bot | N/A | Telegram API | @tms_agent_bot |
+### TMS (@oneaiteam_bot)
+- **OneTMS Platform**: https://onetms.us (staging: 44.193.75.239)
+- **Backend API**: /api/* (ASP.NET Core)
+- **Highway API Integration**: Carrier lookup, onboarding, monitoring
+- **FourKites**: Load tracking integration
 
-### TSAP
-| Service | Port | Protocol | Description |
-|---------|------|----------|-------------|
-| Platform | 443 | HTTPS | https://tsap.ai - Main web platform |
-| API | TBD | HTTPS | TSAP API endpoints |
-| Carrier Lookup | TBD | HTTPS | Carrier vetting and lookup |
-| Safety Scores | TBD | HTTPS | Safety score retrieval |
-| Inspection Data | TBD | HTTPS | FMCSA inspection data |
-| Network Analysis | TBD | HTTPS | Fraud network analysis |
-| Telegram Bot | N/A | Telegram API | @one_hr_bot |
-| Social | N/A | X/Twitter | @TSAPlatform |
+### TSAP (@one_hr_bot / @TSAPlatform on X)
+- **Platform**: https://tsap.ai
+- **Server**: 44.199.195.85
+- **API Endpoints**:
+  - Carrier lookup
+  - Safety scores
+  - Inspection data
+  - Network analysis (fraud/chameleon detection)
+- **Social**: [@TSAPlatform](https://x.com/TSAPlatform)
 
-**TSAP Server:** 44.199.195.85
-
-### Middleware
-| Service | Port | Protocol | Description |
-|---------|------|----------|-------------|
-| API Gateway | TBD | HTTP/HTTPS | System integration layer |
-| Routing | TBD | HTTP/HTTPS | Request routing and load balancing |
-| Telegram Bot | N/A | Telegram API | @middleware_agent_bot |
+### Middleware (@imai1_bot)
+- **Workspace**: `/home/ubuntu/.openclaw/workspaces/integrations/`
+- **Purpose**: Cross-agent integrations and collaboration tasks
 
 ---
 
-## 🔒 Security Notes
+## Port Summary
 
-- All HTTPS endpoints should use valid SSL certificates
-- API keys/tokens should be stored securely (e.g., `~/.github_token`)
-- Internal services may be firewalled between servers
-- Telegram bots use Bot API with secure tokens
-
-## 📝 TODO
-
-- [ ] Document exact ports for each service
-- [ ] Add authentication methods for each endpoint
-- [ ] Document rate limits
-- [ ] Add health check endpoints
-- [ ] Document WebSocket endpoints if any
+| Server | IP | Notable Ports |
+|--------|-----|---------------|
+| Server 1 | 72.208.97.210 | *TBD* |
+| Server 2 | 18.219.38.137 | 5000 (TMS backend), 80/443 (nginx) |
+| TSAP | 44.199.195.85 | 443 (tsap.ai) |

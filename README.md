@@ -1,48 +1,44 @@
-# AI Agent Collaboration Documentation
+# AI Agent Collaboration
 
-This repository documents the AI agents, their locations, endpoints, and collaboration protocols across the infrastructure.
+Documentation for AI agent collaboration across servers.
 
-## 🗺️ Agent Map
+## Agent Map
 
 ### Server 1 (72.208.97.210)
-| Agent | Purpose | Telegram Handle | Notes |
-|-------|---------|-----------------|-------|
-| **VAI** | General assistant | @vai_agent_bot | Main coordination agent |
-| **Bridge** | Integration layer | @bridge_agent_bot | Connects various services |
-| **GAAP** | Accounting/Finance | @gaap_agent_bot | Financial operations and reporting |
-| **ONEFLEET** | Fleet management | @onefleet_agent_bot | Vehicle and logistics tracking |
+
+| Agent | Telegram | Purpose |
+|-------|----------|---------|
+| VAI | @ionos1ai_bot | |
+| Bridge | @imai2_bot | |
+| GAAP | @ionosai2_bot | |
+| ONEFLEET | @ionosai3_bot | |
 
 ### Server 2 (18.219.38.137)
-| Agent | Purpose | Telegram Handle | Notes |
-|-------|---------|-----------------|-------|
-| **TMS** | Transportation Management System | @tms_agent_bot | Core TMS platform |
-| **TSAP** | Transportation Safety Intelligence | @one_hr_bot | Carrier vetting, fraud detection |
-| **Middleware** | System integration layer | @middleware_agent_bot | API gateway and routing |
 
-### Additional Agent Details
+| Agent | Telegram | Purpose |
+|-------|----------|---------|
+| **TMS** | @oneaiteam_bot | OneTMS transportation management system |
+| **TSAP** | @one_hr_bot | Transportation safety intelligence — carrier vetting, fraud detection, FMCSA data |
+| **Middleware** | @imai1_bot | Integrations agent |
 
-#### TSAP (@one_hr_bot)
-- **Platform:** https://tsap.ai
-- **Server:** 44.199.195.85
-- **Purpose:** Transportation safety intelligence — carrier vetting, chameleon carrier detection, fraud network analysis, FMCSA data
-- **Social:** @TSAPlatform on X
-- **Endpoints:** TSAP API (carrier lookup, safety scores, inspection data, network analysis)
+---
 
-## 📁 Repository Structure
+## Quick Reference
 
 ```
-ai-agent-collab/
-├── README.md           # This file - Agent map and overview
-├── endpoints.md        # API endpoints and service ports
-└── collaboration.md    # Collaboration protocols and guidelines
+Server 1 (72.208.97.210)
+├── VAI        @ionos1ai_bot
+├── Bridge     @imai2_bot
+├── GAAP       @ionosai2_bot
+└── ONEFLEET   @ionosai3_bot
+
+Server 2 (18.219.38.137)
+├── TMS        @oneaiteam_bot  → OneTMS platform
+├── TSAP       @one_hr_bot      → https://tsap.ai
+└── Middleware @imai1_bot       → Integrations
 ```
 
-## 🚀 Quick Start
+## Files
 
-1. Check `endpoints.md` for available services and APIs
-2. Review `collaboration.md` for messaging protocols
-3. Contact agents via their Telegram handles for coordination
-
-## 📞 Support
-
-For issues or questions about this documentation, contact the main coordination agent.
+- [`endpoints.md`](endpoints.md) — Open ports, APIs, and services per agent
+- [`collaboration.md`](collaboration.md) — How agents can work together
